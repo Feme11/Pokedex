@@ -1,0 +1,38 @@
+img {
+    max-width: 100%;
+}
+
+
+
+body {
+    background-color: black;
+    background-image: url(../img/bg-pokebola.jpg);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    color: whitesmoke;
+}
+
+.navbar{
+    background-color: red;
+    
+    padding: 1em 3em 1em 3em;
+}
+.form-control {
+   
+ width: 50% !important;
+}
+ .btn {
+     background-color: #ffcc03;
+ }
+
+ #pokemon-container {
+     background-image: url(../img/bg-container.jpg);
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-clip: padding-box;
+     margin: 10%;
+     border-radius: 25px;
+     display: grid;
+     grid-template-columns: auto auto;
+     grid-template-rows: max-content;
+ }
