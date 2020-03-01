@@ -14,11 +14,11 @@ body {
 
 .navbar{
     background-color: red;
-    
+
     padding: 1em 3em 1em 3em;
 }
 .form-control {
-   
+
  width: 50% !important;
 }
  .btn {
@@ -26,13 +26,14 @@ body {
  }
 
  #pokemon-container {
-     background-image: url(../img/bg-container.jpg);
-     background-repeat: no-repeat;
-     background-size: cover;
-     background-clip: padding-box;
-     margin: 10%;
+     background-color: darkred;
+     margin: 5%;
      border-radius: 25px;
-     display: grid;
-     grid-template-columns: auto auto;
-     grid-template-rows: max-content;
  }
+ 
+/* MOBILE */
+@media screen and (max-width: 800px) {
+    .form-control {
+        width: 100% !important;
+    }
+  }
