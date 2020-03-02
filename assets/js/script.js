@@ -53,29 +53,41 @@ $('#pokesearch').click(function() {
       }
   
       $('.info-modal').empty();
-      $('#pokemon-container').append(`<h3 class="pakimon-imagen pakimon-img-modal" data-toggle="modal" data-target="#myModal">Estadísticas</h3>`);
-      $('.info-modal').append(`<div class="graficos"></div>`);
+      $('#pokemon-container').append(`<h3 data-toggle="modal" data-target="#myModal">Estadísticas</h3>`);
+      $('.info-modal').append(`<div class="graficos p-5"></div>`);
   
-      var datos = {	 	
-      theme:'light1', width:'800', height:'500',
-       animationEnabled: true,
-       title: {
-         text: "Stats Base"
-       },
-       axisY: {
-         title: "%",
-         includeZero: false
-       },
-       axisX: {
-         title: "Estadísticas"
-       },
-       data: [{
-         type: "column",
-         dataPoints: estad__pokemon
-       }]	};
-       
-       
-       $(".graficos").CanvasJSChart(datos);
+      var datos = {
+        animationEnabled: true, 
+        title: {
+          text: "Estadísticas de tu pokémon",                
+          fontColor: "#af201b"
+        },	
+        axisY: {
+          tickThickness: 0,
+          lineThickness: 0,
+          valueFormatString: " ",
+          gridThickness: 0                    
+        },
+      axisX: {
+          tickThickness: 0,
+          lineThickness: 0,
+          labelFontSize: 18,
+          labelFontColor: "#af201b"			
+        },
+        data: [{
+          indexLabelFontSize: 26,
+          toolTipContent: "<span style=\"color:#CD853F\"><strong>{y}%</strong></span>",
+          indexLabelPlacement: "inside",
+          indexLabelFontColor: "white",
+          indexLabelFontWeight: 20,
+          indexLabelFontFamily: "Verdana",
+          colors: " ",
+          type: "bar",
+          dataPoints: estad__pokemon,
+        }]
+      };
+      
+      $(".graficos").CanvasJSChart(datos);
   
       
   
